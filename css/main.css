@@ -1,0 +1,475 @@
+/* COLORS */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.app {
+  position: relative;
+  background-color: #1c1b4d;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+.app header {
+  position: relative;
+  float: left;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  color: #ffffff;
+}
+
+.app header h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.app header h3 {
+  font-size: 24px;
+}
+
+.app .container {
+  position: relative;
+  width: 980px;
+  height: 100%;
+}
+
+.app .container .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -50px;
+}
+
+.app .container .menu .button + .button {
+  margin-top: 2rem;
+}
+
+.app .container .game-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .container .game-wrapper .scoreboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 500px;
+  padding: 20px;
+  border-radius: 0.4rem;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+}
+
+.app .container .game-wrapper .scoreboard .score {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border-radius: 0.4rem;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .container .game-wrapper .scoreboard .score span {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.15em;
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-weight: 800;
+  color: #1791b1;
+}
+
+.app .container .game-wrapper .scoreboard .score h4 {
+  font-size: 48px;
+}
+
+.app .container .game-wrapper .game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.app .container .game-wrapper .game .choices {
+  width: 100%;
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.app .container .game-wrapper .game .choices h4 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.app .container .game-wrapper .game .selection {
+  width: 100%;
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .container .game-wrapper .game .selection .selected-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.app .container .game-wrapper .game .selection .selected-choice h4 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.app .container .game-wrapper .game .selection .round-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.app .container .game-wrapper .game .selection .round-status h3 {
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.app .container .game-wrapper .game .selection .round-status .button + .button {
+  margin-top: 20px;
+}
+
+.app ul {
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+.app ul .choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  padding: 30px;
+  font-size: 54px;
+  width: 60px;
+  height: 60px;
+  border: 10px solid;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0 10px rgba(118, 85, 225, 0.3);
+          box-shadow: 0px 0 10px rgba(118, 85, 225, 0.3);
+}
+
+.app ul .choice:hover {
+  -webkit-box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+          box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+}
+
+.app ul .choice--top {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.app ul .choice--left {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  -webkit-transform: translate(-50%, 5%);
+          transform: translate(-50%, 5%);
+}
+
+.app ul .choice--right {
+  position: absolute;
+  top: 35%;
+  left: 60%;
+  -webkit-transform: translate(-50%, 5%);
+          transform: translate(-50%, 5%);
+}
+
+.app ul .choice--rock {
+  border-color: #b80e65;
+}
+
+.app ul .choice--scissors {
+  border-color: #1791b1;
+}
+
+.app ul .choice--paper {
+  border-color: #17b17e;
+}
+
+.app .button {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  padding: 20px 30px;
+  text-decoration: none;
+  outline: none !important;
+  text-align: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+  border: double 2px transparent;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+.app .button:hover {
+  border: 2px solid;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+          box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+}
+
+.app .button--pink {
+  background-color: #b80e65;
+}
+
+.app .button--pink:hover {
+  border-color: #b80e65;
+  color: #b80e65;
+}
+
+.app .button--blue {
+  background-color: #1791b1;
+}
+
+.app .button--blue:hover {
+  border-color: #1791b1;
+  color: #1791b1;
+}
+
+.app .button--rules {
+  background-color: transparent;
+  border-color: #ffffff;
+  position: absolute;
+  right: 0;
+  bottom: 2rem;
+}
+
+.app .button--rules:hover {
+  border-color: #17b17e;
+  color: #17b17e;
+}
+
+.app .visible {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.app .hidden {
+  display: none !important;
+}
+/*# sourceMappingURL=main.css.map */
