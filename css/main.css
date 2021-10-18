@@ -86,6 +86,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  color: #222222;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -134,7 +135,7 @@ table {
 
 .app {
   position: relative;
-  background-color: #1c1b4d;
+  background-color: #fef9ef;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -155,17 +156,13 @@ table {
   float: left;
   width: 100%;
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   color: #ffffff;
 }
 
 .app header h1 {
   font-size: 48px;
   font-weight: 800;
-}
-
-.app header h3 {
-  font-size: 24px;
 }
 
 .app .container {
@@ -220,15 +217,15 @@ table {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 500px;
-  padding: 20px;
+  padding: 10px;
   border-radius: 0.4rem;
   border: 2px solid rgba(255, 255, 255, 0.6);
   margin-bottom: 2rem;
 }
 
 .app .container .game-wrapper .scoreboard .score {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   background-color: #ffffff;
   border-radius: 0.4rem;
   padding: 10px;
@@ -251,7 +248,7 @@ table {
   font-size: 12px;
   margin-bottom: 5px;
   font-weight: 800;
-  color: #1791b1;
+  color: #a2d2ff;
 }
 
 .app .container .game-wrapper .scoreboard .score h4 {
@@ -264,7 +261,7 @@ table {
   display: flex;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 350px;
 }
 
 .app .container .game-wrapper .game .choices {
@@ -278,7 +275,6 @@ table {
 
 .app .container .game-wrapper .game .choices h4 {
   text-align: center;
-  color: #ffffff;
   font-weight: 800;
   margin-bottom: 30px;
 }
@@ -309,7 +305,7 @@ table {
 }
 
 .app .container .game-wrapper .game .selection .selected-choice h4 {
-  color: #ffffff;
+  color: #222222;
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 800;
@@ -330,7 +326,7 @@ table {
 }
 
 .app .container .game-wrapper .game .selection .round-status h3 {
-  color: #ffffff;
+  color: #222222;
   font-size: 48px;
   font-weight: 800;
   margin-bottom: 20px;
@@ -344,7 +340,7 @@ table {
   list-style-type: none;
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 100%;
 }
 
 .app ul .choice {
@@ -360,8 +356,8 @@ table {
   cursor: pointer;
   padding: 30px;
   font-size: 54px;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   border: 10px solid;
   border-radius: 50%;
   -webkit-box-shadow: 0px 0 10px rgba(118, 85, 225, 0.3);
@@ -383,7 +379,7 @@ table {
 
 .app ul .choice--left {
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 40%;
   -webkit-transform: translate(-50%, 5%);
           transform: translate(-50%, 5%);
@@ -391,22 +387,22 @@ table {
 
 .app ul .choice--right {
   position: absolute;
-  top: 35%;
+  top: 30%;
   left: 60%;
   -webkit-transform: translate(-50%, 5%);
           transform: translate(-50%, 5%);
 }
 
 .app ul .choice--rock {
-  border-color: #b80e65;
+  border-color: #ff865e;
 }
 
 .app ul .choice--scissors {
-  border-color: #1791b1;
+  border-color: #a2d2ff;
 }
 
 .app ul .choice--paper {
-  border-color: #17b17e;
+  border-color: #fee440;
 }
 
 .app .button {
@@ -427,27 +423,27 @@ table {
 
 .app .button:hover {
   border: 2px solid;
-  background-color: transparent;
+  background-color: #ffffff;
   -webkit-box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
           box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
 }
 
-.app .button--pink {
-  background-color: #b80e65;
+.app .button--orange {
+  background-color: #ff865e;
 }
 
-.app .button--pink:hover {
-  border-color: #b80e65;
-  color: #b80e65;
+.app .button--orange:hover {
+  border-color: #ff865e;
+  color: #ff865e;
 }
 
 .app .button--blue {
-  background-color: #1791b1;
+  background-color: #a2d2ff;
 }
 
 .app .button--blue:hover {
-  border-color: #1791b1;
-  color: #1791b1;
+  border-color: #a2d2ff;
+  color: #a2d2ff;
 }
 
 .app .button--rules {
@@ -459,8 +455,8 @@ table {
 }
 
 .app .button--rules:hover {
-  border-color: #17b17e;
-  color: #17b17e;
+  border-color: #fee440;
+  color: #fee440;
 }
 
 .app .visible {

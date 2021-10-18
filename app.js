@@ -7,6 +7,7 @@ const game = () => {
     this.counters = properties.counters;
   }
 
+  // Main menu init
   const initGame = () => {
     const regularGame_button = document.getElementById("regular-game");
     const computerGame_button = document.getElementById("computer-game");
@@ -28,6 +29,7 @@ const game = () => {
     });
   };
   
+  // Main function that handles the whole game process
   const startMatch = (type) => {
     const buttons = document.querySelectorAll(".choice");
     const startRoundScene = document.getElementById("start-round");
@@ -70,6 +72,7 @@ const game = () => {
       selectionScene.classList.add("visible");
       nextRound_button.style.display = 'none';
 
+      // Create an interval to simulate IA vs IA game
       var IAMATCH = setInterval(() => {
         const playerChoice = choices[Math.floor(Math.random() * choices.length)];
         const computerChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -85,6 +88,7 @@ const game = () => {
       startRoundScene.classList.add("visible");
     });
 
+    // Stops an IA vs IA match
     stopMatch_button.addEventListener("click", () => {
       clearInterval(IAMATCH);
     });
@@ -110,6 +114,7 @@ const game = () => {
     });
   }
 
+  // Compare function to pick a winner
   const compareChoices = (choice1, choice2) => {
     const playerSelection = document.getElementById("player-select");
     const computerSelection = document.getElementById("computer-select");
@@ -133,6 +138,7 @@ const game = () => {
     }
   };
 
+  // Update player or computer score
   const updateScore = (player) => {
     const p1Score_h4 = document.getElementById("p1");
     const p2Score_h4 = document.getElementById("p2");
@@ -149,6 +155,7 @@ const game = () => {
     }
   };
 
+  // Display the player and computer selections graphically
   const updateSelection = (selectionElement, choice) => {
     // Reset classes
     selectionElement.classList.remove('choice--scissors');

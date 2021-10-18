@@ -1,9 +1,10 @@
 /* COLORS */
-$dark-blue: #1c1b4d;
-$pink: #b80e65;
-$teal: #1791b1;
-$green: #17b17e;
+$dark-blue: #fef9ef;
+$orange: #ff865e;
+$teal: #a2d2ff;
+$yellow: #fee440;
 $white: #ffffff;
+$black: #222222;
 
 html,
 body,
@@ -92,6 +93,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  color: $black;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -160,16 +162,12 @@ table {
     float: left;
     width: 100%;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     color: $white;
 
     h1 {
       font-size: 48px;
       font-weight: 800;
-    }
-
-    h3 {
-      font-size: 24px;
     }
   }
 
@@ -205,14 +203,14 @@ table {
         display: flex;
         justify-content: space-between;
         width: 500px;
-        padding: 20px;
+        padding: 10px;
         border-radius: 0.4rem;
         border: 2px solid rgba(255, 255, 255, 0.6);
         margin-bottom: 2rem;
 
         .score {
-          width: 80px;
-          height: 80px;
+          width: 70px;
+          height: 70px;
           background-color: $white;
           border-radius: 0.4rem;
           padding: 10px;
@@ -240,7 +238,7 @@ table {
         display: flex;
         position: relative;
         width: 100%;
-        height: 100%;
+        height: 350px;
 
         .choices {
           width: 100%;
@@ -249,7 +247,6 @@ table {
 
           h4 {
             text-align: center;
-            color: $white;
             font-weight: 800;
             margin-bottom: 30px;
           }
@@ -268,7 +265,7 @@ table {
             justify-items: center;
 
             h4 {
-              color: $white;
+              color: $black;
               text-transform: uppercase;
               font-size: 24px;
               font-weight: 800;
@@ -282,7 +279,7 @@ table {
             align-items: center;
 
             h3 {
-              color: $white;
+              color: $black;
               font-size: 48px;
               font-weight: 800;
               margin-bottom: 20px;
@@ -301,7 +298,7 @@ table {
     list-style-type: none;
     position: relative;
     width: 100%;
-    height: 350px;
+    height: 100%;
 
     .choice {
       display: flex;
@@ -310,8 +307,8 @@ table {
       cursor: pointer;
       padding: 30px;
       font-size: 54px;
-      width: 60px;
-      height: 60px;
+      width: 30px;
+      height: 30px;
       border: 10px solid;
       border-radius: 50%;
       box-shadow: 0px 0 10px rgba(118, 85, 225, 0.3);
@@ -329,20 +326,20 @@ table {
 
       &--left {
         position: absolute;
-        top: 35%;
+        top: 30%;
         left: 40%;
         transform: translate(-50%, 5%);
       }
 
       &--right {
         position: absolute;
-        top: 35%;
+        top: 30%;
         left: 60%;
         transform: translate(-50%, 5%);
       }
 
       &--rock {
-        border-color: $pink;
+        border-color: $orange;
       }
 
       &--scissors {
@@ -350,7 +347,7 @@ table {
       }
 
       &--paper {
-        border-color: $green;
+        border-color: $yellow;
       }
     }
   }
@@ -371,16 +368,16 @@ table {
 
     &:hover {
       border: 2px solid;
-      background-color: transparent;
+      background-color: $white;
       box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
     }
 
-    &--pink {
-      background-color: $pink;
+    &--orange {
+      background-color: $orange;
 
       &:hover {
-        border-color: $pink;
-        color: $pink;
+        border-color: $orange;
+        color: $orange;
       }
     }
 
@@ -401,8 +398,8 @@ table {
       bottom: 2rem;
 
       &:hover {
-        border-color: $green;
-        color: $green;
+        border-color: $yellow;
+        color: $yellow;
       }
     }
   }
