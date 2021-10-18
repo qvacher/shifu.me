@@ -1,6 +1,8 @@
 # shifu.me
 Simple Javascript Rock Paper Scissors game
 
+![Screenshot](https://raw.githubusercontent.com/qvacher/shifu.me/main/img/shifume-screen.png)
+
 ## Technologies used
 * Javascript (ES6)
 * HTML
